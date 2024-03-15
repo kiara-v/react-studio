@@ -1,9 +1,209 @@
 /* Add styling for your page here */
 
 .App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }
 
 .BakeryItem {
-  
+    --tw-bg-opacity: 1;
+    background-color: rgb(249 250 251 / var(--tw-bg-opacity))
+}
+
+.content {
+    display: flex;
+    width: 100%;
+}
+
+*,
+:before,
+:after {
+    box-sizing: border-box;
+}
+
+aside {
+    position: sticky;
+    top: 5rem;
+    display: flex;
+    flex-direction: column;
+    width: 33.333333%;
+    max-height: min-content;
+    flex-shrink: 0;
+}
+
+.nothing, .cart-items, .total {
+    margin-top: 1rem
+}
+
+.flex {
+    display: flex
+}
+
+.item-cart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.items {
+    display: grid
+}
+
+.image {
+    height: 15rem
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.desc {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0%;
+    flex-grow: 1;
+    padding: 1rem;
+    justify-content: space-between;
+}
+
+
+.items {
+    grid-template-columns: repeat(1, minmax(0, 1fr))
+}
+
+main {
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.items, .cart-items {
+    gap: 1rem
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+}
+.rounded {
+    border-radius: .375rem
+}
+
+.image {
+    --tw-bg-opacity: 1;
+    background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+    width: 100%;
+}
+
+main, aside {
+    padding: 2rem
+}
+
+.add {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: .375rem;
+}
+
+h1 {
+    font-size: 2.25rem;
+    line-height: 2.5rem
+}
+
+.cart-title {
+    font-size: 1.5rem;
+    line-height: 2rem
+}
+
+.item-name {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+}
+
+.header {
+    font-weight: 500
+}
+
+
+.nothing {
+    --tw-text-opacity: 1;
+    color: rgb(107 114 128 / var(--tw-text-opacity))
+}
+
+:root {
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color-scheme: light dark;
+    color: #ffffffde;
+    background-color: #242424;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%
+}
+
+
+body {
+    margin: 0;
+    display: flex;
+    min-height: 100vh
+}
+
+button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: .6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color .25s
+}
+
+button:hover {
+    border-color: #708090
+}
+
+
+.item {
+    --tw-bg-opacity: 1;
+    /* background-color: rgb(243 244 246 / var(--tw-bg-opacity)); */
+    border-radius: .375rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: .375rem;
+    overflow: hidden;
+    background-color: rgb(75 85 99 / var(--tw-bg-opacity))
+}
+
+.item:hover {
+    background-color: rgb(55 65 81 / var(--tw-bg-opacity))
+}
+
+@media (min-width: 640px) {
+    .content {
+        max-width: 1280px
+    }
+}
+
+@media (min-width: 768px) {
+    .image {
+        flex: 1.5
+    }
+
+    .items {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+    }
 }
